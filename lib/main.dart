@@ -1,4 +1,5 @@
 import 'package:covidapp/screens/login.dart';
+import 'package:covidapp/screens/register.dart';
 import 'package:flutter/material.dart';
 
 void main() => runApp(MyApp());
@@ -13,7 +14,11 @@ class MyApp extends StatelessWidget {
         backgroundColor: Color(0xFFF1F5F7),
         primarySwatch: Colors.blue,
       ),
-      home: LoginScreen(),
+      routes: {
+        'login': (context) => Login(),
+        'register': (context) => Register(),
+      },
+      home: Login(),
     );
   }
 }
