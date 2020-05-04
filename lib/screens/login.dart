@@ -138,7 +138,9 @@ class Login extends StatelessWidget {
                                   vertical: 40.0,
                                 ),
                                 child: FlatButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    Navigator.pushNamed(context, 'home');
+                                  },
                                   color: Color(0xff3EB16E),
                                   child: Text(
                                     'Login',

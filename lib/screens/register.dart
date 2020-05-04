@@ -4,7 +4,9 @@ class Register extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     Size screen = MediaQuery.of(context).size;
+    ThemeData theme = Theme.of(context);
     return Scaffold(
+      backgroundColor: theme.backgroundColor,
       body: SafeArea(
         child: LayoutBuilder(
           builder: (context, constrains) {
