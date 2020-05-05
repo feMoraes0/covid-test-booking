@@ -1,3 +1,4 @@
+import 'package:covidapp/components/custom_input.dart';
 import 'package:flutter/material.dart';
 
 class Register extends StatelessWidget {
@@ -59,24 +60,7 @@ class Register extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.white,
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0xff86CFA5),
-                                    width: 0.3,
-                                  ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0xff86CFA5),
-                                    width: 1.0,
-                                  ),
-                                ),
-                              ),
-                            ),
+                            child: CustomInput(),
                           ),
                           Padding(
                             padding: const EdgeInsets.symmetric(
@@ -93,24 +77,7 @@ class Register extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.white,
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0xff86CFA5),
-                                    width: 0.3,
-                                  ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0xff86CFA5),
-                                    width: 1.0,
-                                  ),
-                                ),
-                              ),
-                            ),
+                            child: CustomInput(),
                           ),
                           Padding(
                             padding: const EdgeInsets.symmetric(
@@ -127,24 +94,7 @@ class Register extends StatelessWidget {
                           ),
                           Padding(
                             padding: const EdgeInsets.only(bottom: 8.0),
-                            child: TextField(
-                              decoration: InputDecoration(
-                                filled: true,
-                                fillColor: Colors.white,
-                                enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0xff86CFA5),
-                                    width: 0.3,
-                                  ),
-                                ),
-                                focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Color(0xff86CFA5),
-                                    width: 1.0,
-                                  ),
-                                ),
-                              ),
-                            ),
+                            child: CustomInput(),
                           ),
                           Padding(
                             padding: const EdgeInsets.symmetric(
@@ -159,24 +109,7 @@ class Register extends StatelessWidget {
                               ),
                             ),
                           ),
-                          TextField(
-                            decoration: InputDecoration(
-                              filled: true,
-                              fillColor: Colors.white,
-                              enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xff86CFA5),
-                                  width: 0.3,
-                                ),
-                              ),
-                              focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Color(0xff86CFA5),
-                                  width: 1.0,
-                                ),
-                              ),
-                            ),
-                          ),
+                          CustomInput(),
                           Container(
                             height: 51.0,
                             margin: const EdgeInsets.only(
@@ -198,8 +131,9 @@ class Register extends StatelessWidget {
                           ),
                           Container(
                             margin: const EdgeInsets.only(bottom: 40.0),
-                            padding:
-                                const EdgeInsets.symmetric(horizontal: 60.0),
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: 60.0,
+                            ),
                             child: Text(
                               'By registering you automatically accept the Terms & Polices of COVID-19 app.',
                               textAlign: TextAlign.center,

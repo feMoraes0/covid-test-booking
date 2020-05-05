@@ -1,3 +1,4 @@
+import 'package:covidapp/components/custom_input.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 
@@ -64,24 +65,7 @@ class Login extends StatelessWidget {
                               ),
                               Padding(
                                 padding: const EdgeInsets.only(bottom: 8.0),
-                                child: TextField(
-                                  decoration: InputDecoration(
-                                    filled: true,
-                                    fillColor: Colors.white,
-                                    enabledBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: Color(0xff86CFA5),
-                                        width: 0.3,
-                                      ),
-                                    ),
-                                    focusedBorder: OutlineInputBorder(
-                                      borderSide: BorderSide(
-                                        color: Color(0xff86CFA5),
-                                        width: 1.0,
-                                      ),
-                                    ),
-                                  ),
-                                ),
+                                child: CustomInput(),
                               ),
                               Padding(
                                 padding: const EdgeInsets.symmetric(
@@ -114,24 +98,7 @@ class Login extends StatelessWidget {
                                   ],
                                 ),
                               ),
-                              TextField(
-                                decoration: InputDecoration(
-                                  filled: true,
-                                  fillColor: Colors.white,
-                                  enabledBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0xff86CFA5),
-                                      width: 0.3,
-                                    ),
-                                  ),
-                                  focusedBorder: OutlineInputBorder(
-                                    borderSide: BorderSide(
-                                      color: Color(0xff86CFA5),
-                                      width: 1.0,
-                                    ),
-                                  ),
-                                ),
-                              ),
+                              CustomInput(),
                               Container(
                                 height: 51.0,
                                 margin: const EdgeInsets.symmetric(
