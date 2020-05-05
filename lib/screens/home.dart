@@ -1,3 +1,4 @@
+import 'package:covidapp/components/text_card.dart';
 import 'package:flutter/material.dart';
 
 class Home extends StatelessWidget {
@@ -72,93 +73,17 @@ class Home extends StatelessWidget {
               ),
               child: ListView(
                 children: <Widget>[
-                  Container(
-                    height: 99.0,
-                    padding: const EdgeInsets.only(
-                      top: 33.0,
-                      left: 10.0,
-                      bottom: 33.0,
-                    ),
-                    margin: const EdgeInsets.only(
-                      bottom: 22.0,
-                    ),
-                    color: Colors.white,
-                    child: Text(
-                      'COVID-19 Test Request',
-                      style: TextStyle(
-                        fontSize: 24.0,
-                        fontFamily: 'Avenir',
-                        height: 1.4,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xFF3F6072),
-                      ),
-                    ),
+                  TextCard(
+                    text: 'COVID-19 Test Request',
                   ),
-                  Container(
-                    height: 99.0,
-                    padding: const EdgeInsets.only(
-                      top: 33.0,
-                      left: 10.0,
-                      bottom: 33.0,
-                    ),
-                    margin: const EdgeInsets.only(
-                      bottom: 22.0,
-                    ),
-                    color: Colors.white,
-                    child: Text(
-                      'COVID-19 Prevention',
-                      style: TextStyle(
-                        fontSize: 24.0,
-                        fontFamily: 'Avenir',
-                        height: 1.4,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xFF3F6072),
-                      ),
-                    ),
+                  TextCard(
+                    text: 'COVID-19 Prevention',
                   ),
-                  Container(
-                    height: 99.0,
-                    padding: const EdgeInsets.only(
-                      top: 33.0,
-                      left: 10.0,
-                      bottom: 33.0,
-                    ),
-                    margin: const EdgeInsets.only(
-                      bottom: 22.0,
-                    ),
-                    color: Colors.white,
-                    child: Text(
-                      'Important numbers',
-                      style: TextStyle(
-                        fontSize: 24.0,
-                        fontFamily: 'Avenir',
-                        height: 1.4,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xFF3F6072),
-                      ),
-                    ),
+                  TextCard(
+                    text: 'Important numbers',
                   ),
-                  Container(
-                    height: 99.0,
-                    padding: const EdgeInsets.only(
-                      top: 33.0,
-                      left: 10.0,
-                      bottom: 33.0,
-                    ),
-                    margin: const EdgeInsets.only(
-                      bottom: 22.0,
-                    ),
-                    color: Colors.white,
-                    child: Text(
-                      'Support',
-                      style: TextStyle(
-                        fontSize: 24.0,
-                        fontFamily: 'Avenir',
-                        height: 1.4,
-                        fontWeight: FontWeight.w500,
-                        color: Color(0xFF3F6072),
-                      ),
-                    ),
+                  TextCard(
+                    text: 'Support',
                   ),
                 ],
               ),
