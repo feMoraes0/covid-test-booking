@@ -52,8 +52,13 @@ class Home extends StatelessWidget {
               ),
               child: ListView(
                 children: <Widget>[
-                  TextCard(
-                    text: 'COVID-19 Test Request',
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.pushNamed(context, 'details-request');
+                    },
+                    child: TextCard(
+                      text: 'COVID-19 Test Request',
+                    ),
                   ),
                   TextCard(
                     text: 'COVID-19 Prevention',

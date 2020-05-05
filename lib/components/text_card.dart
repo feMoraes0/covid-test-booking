@@ -17,7 +17,10 @@ class TextCard extends StatelessWidget {
       margin: const EdgeInsets.only(
         bottom: 22.0,
       ),
-      color: Colors.white,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        borderRadius: BorderRadius.circular(4.0),
+      ),
       child: Text(
         this.text,
         style: TextStyle(
