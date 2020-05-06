@@ -121,7 +121,9 @@ class _DetailsRequestState extends State<DetailsRequest> {
         child: FloatingActionButton(
           backgroundColor: Color(0xFF3EB16E),
           child: SvgPicture.asset('assets/icons/check.svg'),
-          onPressed: () {},
+          onPressed: () {
+            Navigator.pushNamed(context, 'details-location');
+          },
         ),
       ),
     );

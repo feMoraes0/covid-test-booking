@@ -1,3 +1,4 @@
+import 'package:covidapp/screens/details/location.dart';
 import 'package:covidapp/screens/details/request.dart';
 import 'package:covidapp/screens/home.dart';
 import 'package:covidapp/screens/login.dart';
@@ -21,6 +22,7 @@ class MyApp extends StatelessWidget {
         'register': (context) => Register(),
         'home': (context) => Home(),
         'details-request': (context) => DetailsRequest(),
+        'details-location': (context) => DetailsLocation(),
       },
       home: Login(),
     );
