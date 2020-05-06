@@ -106,7 +106,7 @@ class _DetailsRequestState extends State<DetailsSymptoms> {
           backgroundColor: Color(0xFF3EB16E),
           child: SvgPicture.asset('assets/icons/check.svg'),
           onPressed: () {
-            Navigator.pushNamed(context, 'details-location');
+            Navigator.pushNamed(context, 'details-past-question');
           },
         ),
       ),
