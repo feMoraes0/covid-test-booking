@@ -1,4 +1,5 @@
 import 'package:covidapp/screens/details/age.dart';
+import 'package:covidapp/screens/details/gender.dart';
 import 'package:covidapp/screens/details/location.dart';
 import 'package:covidapp/screens/details/request.dart';
 import 'package:covidapp/screens/home.dart';
@@ -25,6 +26,7 @@ class MyApp extends StatelessWidget {
         'details-request': (context) => DetailsRequest(),
         'details-location': (context) => DetailsLocation(),
         'details-age': (context) => DetailsAge(),
+        'details-gender': (context) => DetailsGender(),
       },
       home: Login(),
     );
