@@ -11,7 +11,7 @@ class CustomHeader extends StatelessWidget {
           height: 14.0,
           width: 20.0,
           child: Image(
-            image: AssetImage('images/menu-icon.png'),
+            image: AssetImage('assets/icons/menu-icon.png'),
           ),
         ),
         Container(
@@ -21,7 +21,7 @@ class CustomHeader extends StatelessWidget {
             borderRadius: BorderRadius.circular(360.0),
           ),
           child: Image(
-            image: AssetImage('images/user.png'),
+            image: AssetImage('assets/images/user.png'),
           ),
         )
       ],

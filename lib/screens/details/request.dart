@@ -77,7 +77,7 @@ class DetailsRequest extends StatelessWidget {
                         children: <Widget>[
                           Container(
                             child: Image(
-                              image: AssetImage('images/icon_person.png'),
+                              image: AssetImage('assets/icons/person-icon.png'),
                             ),
                           ),
                           Text(
@@ -116,7 +116,7 @@ class DetailsRequest extends StatelessWidget {
                         children: <Widget>[
                           Container(
                             child: Image(
-                              image: AssetImage('images/icon_person.png'),
+                              image: AssetImage('assets/icons/person-icon.png'),
                             ),
                           ),
                           Text(
@@ -155,7 +155,7 @@ class DetailsRequest extends StatelessWidget {
                         children: <Widget>[
                           Container(
                             child: Image(
-                              image: AssetImage('images/icon_person.png'),
+                              image: AssetImage('assets/icons/person-icon.png'),
                             ),
                           ),
                           Text(
@@ -194,7 +194,7 @@ class DetailsRequest extends StatelessWidget {
                         children: <Widget>[
                           Container(
                             child: Image(
-                              image: AssetImage('images/icon_person.png'),
+                              image: AssetImage('assets/icons/person-icon.png'),
                             ),
                           ),
                           Text(
