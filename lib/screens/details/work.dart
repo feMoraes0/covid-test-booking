@@ -111,7 +111,7 @@ class _DetailsLocationState extends State<DetailsWork> {
           backgroundColor: Color(0xFF3EB16E),
           child: SvgPicture.asset('assets/icons/check.svg'),
           onPressed: () {
-            Navigator.pushNamed(context, 'details-gender');
+            Navigator.pushNamed(context, 'details-final');
           },
         ),
       ),

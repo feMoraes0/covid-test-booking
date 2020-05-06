@@ -1,5 +1,6 @@
 import 'package:covidapp/screens/details/age.dart';
 import 'package:covidapp/screens/details/facility.dart';
+import 'package:covidapp/screens/details/final.dart';
 import 'package:covidapp/screens/details/gender.dart';
 import 'package:covidapp/screens/details/life-symptoms.dart';
 import 'package:covidapp/screens/details/location.dart';
@@ -37,6 +38,7 @@ class MyApp extends StatelessWidget {
         'details-past-question': (context) => DetailsPastQuestion(),
         'details-facility': (context) => DetailsFacility(),
         'details-work': (context) => DetailsWork(),
+        'details-final': (context) => DetailsFinal(),
       },
       home: Login(),
     );
