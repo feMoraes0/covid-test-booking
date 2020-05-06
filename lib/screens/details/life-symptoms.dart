@@ -1,27 +1,45 @@
 import 'package:covidapp/components/custom_header.dart';
 import 'package:covidapp/components/icon_text_card.dart';
+import 'package:covidapp/components/list-item.dart';
 import 'package:covidapp/components/text_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class DetailsGender extends StatefulWidget {
+class DetailsLifeSymptoms extends StatefulWidget {
   @override
   _DetailsRequestState createState() => _DetailsRequestState();
 }
 
-class _DetailsRequestState extends State<DetailsGender> {
-  int selected;
+class _DetailsRequestState extends State<DetailsLifeSymptoms> {
+  List<int> _selected;
+  final List<String> _symptoms = [
+    'Not experiencing any life-threatening symptoms',
+    'Extremely difficult breathing',
+    'Blue-colored lips or face',
+    'Severe and constant pain or pressure in the chest',
+    'Severe and constant dizziness or lightheadedness',
+    'Acting confused (new or worsening)',
+    'Unconscious or very difficult to wake up',
+    'Slurred speech (new or worsening)',
+    'New seizure or seizures that won’t stop'
+  ];
 
   @override
   void initState() {
-    this.selected = 0;
+    this._selected = [];
     super.initState();
   }
 
   void handleSelect(int selected) {
-    this.setState(() {
-      this.selected = selected;
-    });
+    if (!this._selected.contains(selected)) {
+      this.setState(() {
+        this._selected.add(selected);
+      });
+    } else {
+      this.setState(() {
+        this._selected.remove(selected);
+      });
+    }
   }
 
   @override
@@ -52,7 +70,7 @@ class _DetailsRequestState extends State<DetailsGender> {
               ),
               Container(
                 child: Text(
-                  'What is your gender?',
+                  'Do you have any of the following life-threatening symptoms?',
                   style: TextStyle(
                     fontFamily: 'Avenir',
                     fontWeight: FontWeight.w500,
@@ -61,44 +79,24 @@ class _DetailsRequestState extends State<DetailsGender> {
                   ),
                 ),
               ),
-              Container(
-                margin: const EdgeInsets.only(
-                  top: 30.0,
-                ),
-                height: 260,
-                width: screen.width,
-                child: GridView.count(
-                  physics: NeverScrollableScrollPhysics(),
-                  crossAxisCount: 2,
-                  mainAxisSpacing: 15.0,
-                  crossAxisSpacing: 15.0,
-                  childAspectRatio: 155 / 105,
-                  children: <Widget>[
-                    GestureDetector(
-                      onTap: () => this.handleSelect(0),
-                      child: IconTextCard(
-                        urlIcon: 'assets/icons/male.svg',
-                        text: 'Male',
-                        active: (this.selected == 0) ? true : false,
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () => this.handleSelect(1),
-                      child: IconTextCard(
-                        urlIcon: 'assets/icons/female.svg',
-                        text: 'Female',
-                        active: (this.selected == 1) ? true : false,
-                      ),
-                    ),
-                    GestureDetector(
-                      onTap: () => this.handleSelect(2),
-                      child: IconTextCard(
-                        urlIcon: 'assets/icons/others-gender.svg',
-                        text: 'Others',
-                        active: (this.selected == 2) ? true : false,
-                      ),
-                    ),
-                  ],
+              Expanded(
+                child: Container(
+                  margin: const EdgeInsets.only(
+                    top: 30.0,
+                  ),
+                  width: screen.width,
+                  child: ListView.builder(
+                    itemCount: this._symptoms.length,
+                    itemBuilder: (context, index) {
+                      return GestureDetector(
+                        onTap: () => handleSelect(index),
+                        child: ListItem(
+                          text: this._symptoms[index],
+                          checked: this._selected.contains(index),
+                        ),
+                      );
+                    },
+                  ),
                 ),
               ),
             ],
@@ -114,7 +112,7 @@ class _DetailsRequestState extends State<DetailsGender> {
           backgroundColor: Color(0xFF3EB16E),
           child: SvgPicture.asset('assets/icons/check.svg'),
           onPressed: () {
-            Navigator.pushNamed(context, 'details-life-symptoms');
+            Navigator.pushNamed(context, 'details-location');
           },
         ),
       ),
