@@ -45,7 +45,7 @@ class _DetailsLocationState extends State<DetailsLocation> {
         bottom: false,
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 20.0,
+            horizontal: 25.0,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -87,7 +87,7 @@ class _DetailsLocationState extends State<DetailsLocation> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Container(
-                      width: screen.width * 0.80,
+                      width: screen.width - 90.0,
                       child: TextField(
                         controller: this._controller,
                         style: TextStyle(
@@ -115,7 +115,7 @@ class _DetailsLocationState extends State<DetailsLocation> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        handleLocation();
+                        this.handleLocation();
                       },
                       child: Container(
                         margin: const EdgeInsets.all(13.0),

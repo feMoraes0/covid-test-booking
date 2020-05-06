@@ -10,17 +10,17 @@ class DetailsGender extends StatefulWidget {
 }
 
 class _DetailsRequestState extends State<DetailsGender> {
-  int selected;
+  int _selected;
 
   @override
   void initState() {
-    this.selected = 0;
+    this._selected = 0;
     super.initState();
   }
 
   void handleSelect(int selected) {
     this.setState(() {
-      this.selected = selected;
+      this._selected = selected;
     });
   }
 
@@ -34,7 +34,7 @@ class _DetailsRequestState extends State<DetailsGender> {
         bottom: false,
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 20.0,
+            horizontal: 25.0,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -79,7 +79,7 @@ class _DetailsRequestState extends State<DetailsGender> {
                       child: IconTextCard(
                         urlIcon: 'assets/icons/male.svg',
                         text: 'Male',
-                        active: (this.selected == 0) ? true : false,
+                        active: (this._selected == 0) ? true : false,
                       ),
                     ),
                     GestureDetector(
@@ -87,7 +87,7 @@ class _DetailsRequestState extends State<DetailsGender> {
                       child: IconTextCard(
                         urlIcon: 'assets/icons/female.svg',
                         text: 'Female',
-                        active: (this.selected == 1) ? true : false,
+                        active: (this._selected == 1) ? true : false,
                       ),
                     ),
                     GestureDetector(
@@ -95,7 +95,7 @@ class _DetailsRequestState extends State<DetailsGender> {
                       child: IconTextCard(
                         urlIcon: 'assets/icons/others-gender.svg',
                         text: 'Others',
-                        active: (this.selected == 2) ? true : false,
+                        active: (this._selected == 2) ? true : false,
                       ),
                     ),
                   ],

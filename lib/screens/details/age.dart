@@ -44,7 +44,7 @@ class _DetailsLocationState extends State<DetailsAge> {
         bottom: false,
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 20.0,
+            horizontal: 25.0,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
@@ -86,7 +86,7 @@ class _DetailsLocationState extends State<DetailsAge> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Container(
-                      width: screen.width * 0.80,
+                      width: screen.width - 90.0,
                       child: TextField(
                         keyboardType: TextInputType.number,
                         controller: this._controller,
@@ -115,7 +115,7 @@ class _DetailsLocationState extends State<DetailsAge> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        handleLocation();
+                        this.handleLocation();
                       },
                       child: Container(
                         margin: const EdgeInsets.all(13.0),

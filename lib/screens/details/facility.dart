@@ -34,7 +34,7 @@ class _DetailsLocationState extends State<DetailsFacility> {
         bottom: false,
         child: Padding(
           padding: const EdgeInsets.symmetric(
-            horizontal: 20.0,
+            horizontal: 25.0,
           ),
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
