@@ -1,30 +1,29 @@
 import 'package:covidapp/components/custom_header.dart';
-import 'package:covidapp/components/icon_text_card.dart';
 import 'package:covidapp/components/text_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class DetailsLocation extends StatefulWidget {
+class DetailsAge extends StatefulWidget {
   @override
   _DetailsLocationState createState() => _DetailsLocationState();
 }
 
-class _DetailsLocationState extends State<DetailsLocation> {
-  String _location;
+class _DetailsLocationState extends State<DetailsAge> {
+  int _age;
   TextEditingController _controller;
 
   @override
   void initState() {
-    this._location = null;
+    this._age = null;
     this._controller = new TextEditingController();
     super.initState();
   }
 
   void handleLocation() {
-    String location = this._controller.text;
-    if (location != '')
+    String age = this._controller.text;
+    if (age != '')
       this.setState(() {
-        this._location = location;
+        this._age = int.parse(age);
       });
     FocusScope.of(context).requestFocus(FocusNode());
   }
@@ -63,7 +62,7 @@ class _DetailsLocationState extends State<DetailsLocation> {
               ),
               Container(
                 child: Text(
-                  'Where are you currently located?',
+                  'What\'s your age?',
                   style: TextStyle(
                     fontFamily: 'Avenir',
                     fontWeight: FontWeight.w500,
@@ -89,6 +88,7 @@ class _DetailsLocationState extends State<DetailsLocation> {
                     Container(
                       width: screen.width * 0.80,
                       child: TextField(
+                        keyboardType: TextInputType.number,
                         controller: this._controller,
                         style: TextStyle(
                           fontFamily: 'Avenir',
@@ -101,7 +101,7 @@ class _DetailsLocationState extends State<DetailsLocation> {
                             left: 15.0,
                             bottom: 3.0,
                           ),
-                          hintText: 'Search Location',
+                          hintText: 'Enter age',
                           hintStyle: TextStyle(
                             fontFamily: 'Avenir',
                             fontSize: 14.0,
@@ -128,7 +128,7 @@ class _DetailsLocationState extends State<DetailsLocation> {
                   ],
                 ),
               ),
-              (this._location != null)
+              (this._age != null)
                   ? Container(
                       width: screen.width,
                       height: 40.0,
@@ -148,7 +148,7 @@ class _DetailsLocationState extends State<DetailsLocation> {
                               left: 10.0,
                             ),
                             child: Text(
-                              this._location,
+                              this._age.toString(),
                               style: TextStyle(
                                 fontFamily: 'Avenir',
                                 fontSize: 16.0,
@@ -171,9 +171,7 @@ class _DetailsLocationState extends State<DetailsLocation> {
         child: FloatingActionButton(
           backgroundColor: Color(0xFF3EB16E),
           child: SvgPicture.asset('assets/icons/check.svg'),
-          onPressed: () {
-            Navigator.pushNamed(context, 'details-age');
-          },
+          onPressed: () {},
         ),
       ),
     );
