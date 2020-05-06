@@ -117,7 +117,9 @@ class Register extends StatelessWidget {
                               bottom: 32.0,
                             ),
                             child: FlatButton(
-                              onPressed: () {},
+                              onPressed: () {
+                                Navigator.pushNamed(context, 'home');
+                              },
                               color: Color(0xff3EB16E),
                               child: Text(
                                 'Register',
