@@ -1,27 +1,21 @@
 import 'package:covidapp/components/custom_header.dart';
-import 'package:covidapp/components/icon_text_card.dart';
 import 'package:covidapp/components/list-item.dart';
 import 'package:covidapp/components/text_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class DetailsLifeSymptoms extends StatefulWidget {
+class DetailsSymptoms extends StatefulWidget {
   @override
   _DetailsRequestState createState() => _DetailsRequestState();
 }
 
-class _DetailsRequestState extends State<DetailsLifeSymptoms> {
+class _DetailsRequestState extends State<DetailsSymptoms> {
   List<int> _selected;
   final List<String> _symptoms = [
-    'Not experiencing any life-threatening symptoms',
-    'Extremely difficult breathing',
-    'Blue-colored lips or face',
-    'Severe and constant pain or pressure in the chest',
-    'Severe and constant dizziness or lightheadedness',
-    'Acting confused (new or worsening)',
-    'Unconscious or very difficult to wake up',
-    'Slurred speech (new or worsening)',
-    'New seizure or seizures that won’t stop'
+    'Moderate to severe difficulty breathing',
+    'Coughing up blood',
+    'Signs of low BP (feeling cold, too weak to stand)',
+    'None of the above'
   ];
 
   @override
@@ -70,7 +64,7 @@ class _DetailsRequestState extends State<DetailsLifeSymptoms> {
               ),
               Container(
                 child: Text(
-                  'Do you have any of the following life-threatening symptoms?',
+                  'Do you have any of the following symptoms?',
                   style: TextStyle(
                     fontFamily: 'Avenir',
                     fontWeight: FontWeight.w500,
@@ -112,7 +106,7 @@ class _DetailsRequestState extends State<DetailsLifeSymptoms> {
           backgroundColor: Color(0xFF3EB16E),
           child: SvgPicture.asset('assets/icons/check.svg'),
           onPressed: () {
-            Navigator.pushNamed(context, 'details-symptoms');
+            Navigator.pushNamed(context, 'details-location');
           },
         ),
       ),

@@ -3,6 +3,7 @@ import 'package:covidapp/screens/details/gender.dart';
 import 'package:covidapp/screens/details/life-symptoms.dart';
 import 'package:covidapp/screens/details/location.dart';
 import 'package:covidapp/screens/details/request.dart';
+import 'package:covidapp/screens/details/symptoms.dart';
 import 'package:covidapp/screens/home.dart';
 import 'package:covidapp/screens/login.dart';
 import 'package:covidapp/screens/register.dart';
@@ -29,6 +30,7 @@ class MyApp extends StatelessWidget {
         'details-age': (context) => DetailsAge(),
         'details-gender': (context) => DetailsGender(),
         'details-life-symptoms': (context) => DetailsLifeSymptoms(),
+        'details-symptoms': (context) => DetailsSymptoms(),
       },
       home: Login(),
     );
