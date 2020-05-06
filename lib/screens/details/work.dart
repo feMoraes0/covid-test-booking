@@ -4,12 +4,12 @@ import 'package:covidapp/components/text_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class DetailsPastQuestion extends StatefulWidget {
+class DetailsWork extends StatefulWidget {
   @override
   _DetailsLocationState createState() => _DetailsLocationState();
 }
 
-class _DetailsLocationState extends State<DetailsPastQuestion> {
+class _DetailsLocationState extends State<DetailsWork> {
   int _selected;
 
   @override
@@ -52,10 +52,12 @@ class _DetailsLocationState extends State<DetailsPastQuestion> {
               ),
               Container(
                 child: Text(
-                  'In the two weeks before you felt sick, did you:'
-                  '\n\nHave contact with someone diagnosed with COVID-19'
-                  '\n or '
-                  '\nLive in or visit a place where COVID-19 is spreading',
+                  'In the last two weeks have you worked or volunteered in a '
+                  'hospital, emergency room, clinic, medical office, '
+                  'long-term care facility or nursing home, ambulance '
+                  'service, first responder services, or any health care '
+                  'setting or taken care of patients as a student or part '
+                  'of your work?',
                   style: TextStyle(
                     fontFamily: 'Avenir',
                     fontWeight: FontWeight.w500,
@@ -93,14 +95,6 @@ class _DetailsLocationState extends State<DetailsPastQuestion> {
                         active: (this._selected == 1) ? true : false,
                       ),
                     ),
-                    GestureDetector(
-                      onTap: () => this.handleSelect(2),
-                      child: IconTextCard(
-                        urlIcon: 'assets/icons/question.svg',
-                        text: 'Maybe',
-                        active: (this._selected == 2) ? true : false,
-                      ),
-                    ),
                   ],
                 ),
               ),
@@ -117,7 +111,7 @@ class _DetailsLocationState extends State<DetailsPastQuestion> {
           backgroundColor: Color(0xFF3EB16E),
           child: SvgPicture.asset('assets/icons/check.svg'),
           onPressed: () {
-            Navigator.pushNamed(context, 'details-facility');
+            Navigator.pushNamed(context, 'details-gender');
           },
         ),
       ),

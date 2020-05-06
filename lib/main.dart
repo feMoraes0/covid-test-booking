@@ -1,10 +1,12 @@
 import 'package:covidapp/screens/details/age.dart';
+import 'package:covidapp/screens/details/facility.dart';
 import 'package:covidapp/screens/details/gender.dart';
 import 'package:covidapp/screens/details/life-symptoms.dart';
 import 'package:covidapp/screens/details/location.dart';
 import 'package:covidapp/screens/details/past-question.dart';
 import 'package:covidapp/screens/details/request.dart';
 import 'package:covidapp/screens/details/symptoms.dart';
+import 'package:covidapp/screens/details/work.dart';
 import 'package:covidapp/screens/home.dart';
 import 'package:covidapp/screens/login.dart';
 import 'package:covidapp/screens/register.dart';
@@ -33,6 +35,8 @@ class MyApp extends StatelessWidget {
         'details-life-symptoms': (context) => DetailsLifeSymptoms(),
         'details-symptoms': (context) => DetailsSymptoms(),
         'details-past-question': (context) => DetailsPastQuestion(),
+        'details-facility': (context) => DetailsFacility(),
+        'details-work': (context) => DetailsWork(),
       },
       home: Login(),
     );
