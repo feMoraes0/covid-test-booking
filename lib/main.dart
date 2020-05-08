@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Covid Test Booking',
       theme: ThemeData(
         backgroundColor: Color(0xFFF1F5F7),
